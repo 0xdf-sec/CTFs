@@ -11,7 +11,7 @@ Curious about my CTF stats or want to check out my team’s journey?
 Here’s where you can find us on CTFTime:
 
 - 🌟 [My CTFTime Profile](https://ctftime.org/user/223828)
-- 🏴‍☠️ [Team Page: 0xdf-sec CTFs](https://ctftime.org/team/378999)
+- 🏴‍☠️ [Team Page: Dennis Nedry's IT Support Team](https://ctftime.org/team/378999)
 
 Click the links to see our rankings, event participations, and more.  
 Let the flags keep coming! 🚩

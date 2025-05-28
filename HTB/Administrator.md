@@ -221,11 +221,9 @@ Administrator (domain compromise)
 - `targetedKerberoast.py` - Targeted Kerberoasting attack
 - `secretsdump.py` - DCSync attack implementation
 
-## Lessons Learned
+## Pwned
 
-This box excellently demonstrates a realistic Active Directory attack chain, showcasing how initial low-privilege access can be escalated to domain admin through careful enumeration and exploitation of common AD misconfigurations and excessive privileges.
-
----
+[THE HTB ADMINISTRATOR BOX](https://www.hackthebox.com/achievement/machine/1390647/634)
 
 **Author:** Krish Patel  
 **Date:** April 19, 2025  

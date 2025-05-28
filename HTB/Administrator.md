@@ -227,7 +227,6 @@ This box excellently demonstrates a realistic Active Directory attack chain, sho
 
 ---
 
-**Author:** [Your Name]  
+**Author:** Krish Patel  
 **Date:** April 19, 2025  
 **Tags:** `hackthebox` `active-directory` `bloodhound` `kerberoasting` `dcsync` `password-safe` `windows-pentesting`
-```

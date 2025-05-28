@@ -5,19 +5,16 @@
 This repo contains my personal write-ups and solutions for various Capture The Flag (CTF) challenges I’ve completed. Explore to see how I approached each problem and what I learned along the way!
 ---
 
-## 🏅 Follow My CTF Journey
+## 🕹️ My CTFTime Presence
 
-- **My CTFTime Profile:**  
-  [![Hashenberg on CTFTime](https://img.shields.io/badge/CTFTime-0xdf--sec-blue?logo=ctftime)](https://ctftime.org/user/223828)
+Curious about my CTF stats or want to check out my team’s journey?  
+Here’s where you can find us on CTFTime:
 
-- **My Team:**  
-  [![Team Profile on CTFTime](https://img.shields.io/badge/CTFTime-Team%20378999-purple?logo=ctftime)](https://ctftime.org/team/378999)
+- 🌟 [My CTFTime Profile](https://ctftime.org/user/223828)
+- 🏴‍☠️ [Team Page: 0xdf-sec CTFs](https://ctftime.org/team/378999)
 
----
-
-Stay tuned for more write-ups and epic wins! 🚩
-
----
+Click the links to see our rankings, event participations, and more.  
+Let the flags keep coming! 🚩
 
 
 

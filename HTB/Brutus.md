@@ -162,7 +162,9 @@ Mar  6 06:37:34 - cyberjunkie login from 65.2.161.68
 The investigation confirms a brute-force SSH attack from `65.2.161.68` led to compromise of the `root` and `cyberjunkie` accounts. The attacker established persistence and ran post-exploitation scripts due to insufficient SSH hardening. Implementation of best practices for SSH security and intrusion prevention is strongly recommended to prevent future incidents.
 
 ---
+## Pwned
+https://labs.hackthebox.com/achievement/sherlock/1390647/631
 
-**Author:** 0xdf-sec  
-**Date:** June 2, 2025  
+**Author:** Krish Patel  
+**Date:** June 2, 2025 
 **Tags:** `hackthebox` `forensics` `incident-response` `ssh` `bruteforce` `linux`

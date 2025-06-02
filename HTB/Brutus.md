@@ -166,5 +166,5 @@ The investigation confirms a brute-force SSH attack from `65.2.161.68` led to co
 [Brutus](https://labs.hackthebox.com/achievement/sherlock/1390647/631)
 
 **Author:** Krish Patel  
-**Date:** June 2, 2025 
+**Date:** April 29, 2025 
 **Tags:** `hackthebox` `forensics` `incident-response` `ssh` `bruteforce` `linux`

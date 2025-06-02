@@ -163,7 +163,7 @@ The investigation confirms a brute-force SSH attack from `65.2.161.68` led to co
 
 ---
 ## Pwned
-https://labs.hackthebox.com/achievement/sherlock/1390647/631
+[Brutus](https://labs.hackthebox.com/achievement/sherlock/1390647/631)
 
 **Author:** Krish Patel  
 **Date:** June 2, 2025 

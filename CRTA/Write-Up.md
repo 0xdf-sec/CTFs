@@ -1,6 +1,6 @@
 # CRTA Exam - Multi-Host Active Directory Penetration Test
 
-![CRTA Badge](https://labs.cyberwarfare.live/badge/certificate/68420c82d4374855726d73120)
+![CRTA Badge](https://labs.cyberwarfare.live/badge/certificate/68420c82d4374855726d7312)
 
 
 

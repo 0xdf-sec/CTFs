@@ -13,7 +13,7 @@ Administrator is a pure Active Directory challenge that simulates a real-world W
 |-----------|-------|
 | **Name** | Administrator |
 | **OS** | Windows Server 2022 |
-| **Difficulty** | Medium [30 points] |
+| **Difficulty** | Medium |
 | **Release Date** | 09 Nov 2024 |
 | **Retire Date** | 19 Apr 2025 |
 | **Creator** | nirza |

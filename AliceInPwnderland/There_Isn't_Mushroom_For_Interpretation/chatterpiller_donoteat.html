@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderChat - Caterpillar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            width: 400px;
+            height: 700px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .chat-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .chat-info p {
+            margin: 0;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.sent {
+            align-items: flex-end;
+        }
+
+        .message.received {
+            align-items: flex-start;
+        }
+
+        .message-bubble {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            word-wrap: break-word;
+            position: relative;
+        }
+
+        .message.sent .message-bubble {
+            background: linear-gradient(45deg, #007AFF, #0051D5);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.received .message-bubble {
+            background: white;
+            color: #333;
+            border: 1px solid #e1e5e9;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+            padding: 0 5px;
+        }
+
+        .message.sent .message-time {
+            text-align: right;
+        }
+
+        .message.received .message-time {
+            text-align: left;
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: white;
+            border: 1px solid #e1e5e9;
+            border-radius: 18px;
+            max-width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 3px;
+        }
+
+        .typing-dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #999;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: 0.4;
+            }
+            30% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+
+        .smoke-effect {
+            font-style: italic;
+            color: #666;
+        }
+
+        .emphasis {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .skull-emoji {
+            font-size: 18px;
+            margin: 0 2px;
+        }
+
+        .warning-text {
+            color: #d32f2f;
+            font-weight: 500;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="profile-pic">🐛</div>
+            <div class="chat-info">
+                <h3>Caterpillar_Blue</h3>
+                <p>Last seen smoking hookah</p>
+            </div>
+        </div>
+        
+        <div class="chat-messages">
+            <div class="message sent">
+                <div class="message-bubble">
+                    Caterpillar, I'm so confused about these mushrooms everywhere! Which ones are safe to eat?
+                </div>
+                <div class="message-time">15:23</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Ahhhh, young Alice. In Pwnderland, nothing is quite as it seems. <span class="smoke-effect">*blows smoke ring*</span>
+                </div>
+                <div class="message-time">15:24</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    That doesn't help me much... I found this red-capped one with white spots. It looks like something from a fairy tale!
+                </div>
+                <div class="message-time">15:25</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    The Amanita muscaria... beautiful, isn't it? The red cap speaks of ancient wisdom, but also of great peril. Many who seek enlightenment through its scarlet embrace find only madness.
+                </div>
+                <div class="message-time">15:26</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    So it's dangerous?
+                </div>
+                <div class="message-time">15:27</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Dangerous? Or transformative? The shamans of old would say both. It opens doors in the mind, but the price... <span class="smoke-effect">*pauses*</span> the price can be one's very essence.
+                </div>
+                <div class="message-time">15:28</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    What about this blue-stemmed one I found near the tea party site?
+                </div>
+                <div class="message-time">15:30</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Ah, Psilocybe cyanescens. The "wavy caps" they call them. These little blue beauties are nature's own rabbit holes. Consume them, and you'll find yourself tumbling through dimensions of thought you never knew existed.
+                </div>
+                <div class="message-time">15:31</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    That sounds... intense.
+                </div>
+                <div class="message-time">15:32</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Indeed. Many a traveler has lost themselves in the blue depths, seeing visions of talking cats and mad hatters. But tell me, dear Alice, what happens to those who venture too deep without proper guidance?
+                </div>
+                <div class="message-time">15:33</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    I... I'm not sure. They get lost?
+                </div>
+                <div class="message-time">15:35</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Lost is one way to put it. <span class="smoke-effect">*smoke curls thoughtfully*</span>
+                </div>
+                <div class="message-time">15:36</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    There's also this golden one that seemed to glow in the moonlight...
+                </div>
+                <div class="message-time">15:38</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    The Golden Teacher, Psilocybe cubensis. Aptly named, for it teaches harsh lessons to the unprepared. Its wisdom comes at a cost - it shows you truths about yourself that you may not wish to see.
+                </div>
+                <div class="message-time">15:39</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    And this purple bell-shaped one?
+                </div>
+                <div class="message-time">15:41</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Inocybe violacea. Beautiful, yes, but its purple hue masks a sinister nature. The bells toll for those who mistake beauty for safety.
+                </div>
+                <div class="message-time">15:42</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    So none of these are safe?
+                </div>
+                <div class="message-time">15:44</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    <span class="emphasis">Safe? SAFE?!</span> <span class="smoke-effect">*billows of indignant smoke*</span> My dear child, in Pwnderland, safety is the greatest illusion of all!
+                </div>
+                <div class="message-time">15:45</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    Then what should I do? I need sustenance for my journey...
+                </div>
+                <div class="message-time">15:47</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Listen carefully, Alice. Of all the fungi in these woods, there is one you must NEVER consume. One that promises the ultimate transformation but delivers only...
+                </div>
+                <div class="message-time">15:48</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    Only what?
+                </div>
+                <div class="message-time">15:49</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    <span class="warning-text">The White Death. Amanita bisporigera. They call it the Destroying Angel, but I know it by another name... the one that brings the final silence.</span> <span class="skull-emoji">💀󠄱󠄼󠄡󠄳󠄣󠄳󠅄󠄶󠅫󠅔󠄣󠄤󠅤󠅘󠅏󠄤󠅞󠅔󠅏󠅢󠄣󠅒󠄡󠅢󠅤󠅘󠅏󠄡󠅞󠅏󠅠󠅧󠅞󠅔󠄣󠅢󠅜󠄤󠅞󠅔󠅭</span>
+                </div>
+                <div class="message-time">15:50</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    Final silence?
+                </div>
+                <div class="message-time">15:52</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Those who taste its pure white flesh find themselves face to face with death himself. No hallucinations, no visions, no enlightenment. Just... the end. The symbol of mortality itself.
+                </div>
+                <div class="message-time">15:53</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    That's terrifying!
+                </div>
+                <div class="message-time">15:55</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Terrifying, yes, but also... revealing. For in facing death, one truly understands life. The ancient symbol, the mark of pirates and poison bottles... it appears for a reason.
+                </div>
+                <div class="message-time">15:56</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    I'll definitely avoid that one!
+                </div>
+                <div class="message-time">15:58</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-bubble">
+                    Wise choice, dear Alice. Remember - in Pwnderland, the most innocent appearance often hides the greatest danger. But sometimes... sometimes the very symbol of danger holds the key to everything. <span class="smoke-effect">*disappears in a puff of smoke*</span>
+                </div>
+                <div class="message-time">15:59</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    Caterpillar? CATERPILLAR?!
+                </div>
+                <div class="message-time">16:01</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-bubble">
+                    He's gone... but what did he mean about symbols and keys?
+                </div>
+                <div class="message-time">16:01</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
